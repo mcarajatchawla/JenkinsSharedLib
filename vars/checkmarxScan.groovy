@@ -1,3 +1,5 @@
+// Generic step for performing checkmarx security analysis
+
 def call() {
     // step([$class: 'CxScanBuilder',  
     //     configAsCode: true, 

@@ -1,3 +1,5 @@
+// generic method to perform nexus upoad of the artifact built during maven build
+
 def call(String repo) {
     pom = readMavenPom file: "pom.xml";
 
