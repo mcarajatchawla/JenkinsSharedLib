@@ -1,7 +1,7 @@
 def call(String repo) {
     pom = readMavenPom file: "pom.xml";
 
-    nexusArtifactUploader 
+    nexusArtifactUploader(
         artifacts: [[artifactId: pom.artifactId, classifier: '', 
                     file: 'target/'+pom.artifactId+'-'+pom.version+'.'+pom.packaging, 
                     type: pom.packaging]], 
@@ -11,5 +11,5 @@ def call(String repo) {
         nexusVersion: 'nexus3', 
         protocol: 'https', 
         repository: repo, 
-        version: pom.version
+        version: pom.version)
 }
